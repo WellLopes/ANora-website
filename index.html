@@ -8,25 +8,45 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1>beatysalon.</h1>
-      <div>...</div>
+    <header id="header">
+      <nav class="container">
+        <a class="logo" href="#">beaty<span>salon</span>.</a>
+        <div class="menu">...</div>
+      </nav>
     </header>
 
     <main>
-      <section>
-        <img
-          src="https://images.unsplash.com/photo-1562322140-8baeececf3df?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500"
-          alt="Mulher sorrindo penteando outra mulher"
-        />
-        <h1>Saúde natural para os seus cabelos</h1>
-        <p>
-          Um salão exclusivo em São Paulo, especializado em tratamentos naturais
-        </p>
-        <a href="#"> Agendar um horário</a>
+      <section class="section" id="home">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="https://images.unsplash.com/photo-1562322140-8baeececf3df?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aGFpcmRyZXNzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500"
+              alt="Mulher sorrindo penteando outra mulher"
+            />
+          </div>
+          <div class="text">
+            <h1>Saúde natural para os seus cabelos</h1>
+            <p>
+              Um salão exclusivo em São Paulo, especializado em tratamentos
+              naturais
+            </p>
+            <a class="button" href="#"> Agendar um horário</a>
+          </div>
+        </div>
       </section>
+
+      <!-- Divider Line -->
+      <div class="divider-1"></div>
     </main>
   </body>
 </html>
