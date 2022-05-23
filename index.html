@@ -9,6 +9,9 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./style.css" />
 
+    <!-- Icons -->
+    <link rel="stylesheet" href="./assets/fonts/style.css" />
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +24,19 @@
     <header id="header">
       <nav class="container">
         <a class="logo" href="#">A<span>Nora</span>.</a>
-        <div class="menu">...</div>
+        <!-- Menu -->
+        <div class="menu">
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <!--/Menu-->
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
       </nav>
     </header>
 
@@ -35,18 +50,27 @@
             />
           </div>
           <div class="text">
-            <h1>Bolos personalizados marcando momentos</h1>
+            <h2 class="title">Bolos personalizados marcando momentos</h2>
             <p>
               Uma confeitaria com conceito de encantar e marcar momentos através
               da expressão levadas em cada detalhe confeitado
             </p>
-            <a class="button" href="#">Solicitar um orçamento</a>
+            <a class="button" href="#">Solicitar orçamento</a>
           </div>
         </div>
       </section>
 
       <!-- Divider Line -->
       <div class="divider-1"></div>
+
+      <section class="section" id="about">
+        <div class="container grid">Sobre</div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container grid">Serviços</div>
+      </section>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>
