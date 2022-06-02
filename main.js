@@ -19,16 +19,21 @@ for (const link of links) {
 }
 
 /*Change header shadow when scrolled*/
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY >= navHeight) {
-    header.classList.add('scroll')
-  } else {
-    header.classList.remove('scroll')
-  }
-})
+function changeHeaderWhenScroll() {
+  const header = document.querySelector('#header')
+  const navHeight = header.offsetHeight
+
+  window.addEventListener('scroll', () => {
+    // Scroll greater than header heigth
+    if (window.scrollY >= navHeight) {
+      header.classList.add('scroll')
+    } else {
+      // smaller than header heigth
+      header.classList.remove('scroll')
+    }
+  })
+}
 
 /* Testimonials swiper */
 const swiper = new Swiper('.swiper-container', {
@@ -54,8 +59,26 @@ scrollReveal.reveal(
   #about .image, #about .text,
   #services geader, #services .card,
   #testimonials header, #testimonials .testimonials,
-  #contact .text, #contact .links
+  #contact .text, #contact .links,
+  footer .brand footer .social
 
   `,
   { interval: 100 }
 )
+
+/* Back to top button */
+
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+
+  if (window.scrollY >= 875) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+window.addEventListener('scroll', () => {
+  changeHeaderWhenScroll()
+  backToTop()
+})
