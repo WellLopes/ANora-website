@@ -183,6 +183,7 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
   color: var(--base-color);
+  -webkit-font-smoothing: antialiased;
 
 }
 
@@ -383,6 +384,10 @@ nav.show ul.grid{
   text-align: center;
 }
 
+.card:hover  {
+  transform: translateY(0.5rem);
+}
+
 .card i {
   display: block;
   margin-bottom: 1.5rem;
@@ -560,8 +565,216 @@ footer .social a:hover {
 }
 
 /*RESPONSIVE °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°*/
+
+/* Medium devices: 767 > */
+@media (min-width: 767px) {
+  :root {
+    --title-font-size: 2rem;
+    --subtitle-font-size: 1rem;
+  }
+
+  /* layout */
+  main {
+    margin-top: var(--header-heigth);
+  }
+  
+    /* home */
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 1;
+    width: 60%;
+    right: -4rem;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24rem;
+    text-align: left;
+  }
+    
+  /* about */
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+
+  /* services */
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
+
+  .card {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .card:hover
+  {
+    color: var(--base-color-alt);  
+    display: inline-block;
+    transform: translateX(-0.5rem);
+    transition: 0.5s;
+  }
+
+  .card i {
+    font-size: 4rem;
+  }
+
+  .card i:hover {
+    transform: translateY(-0.5rem);
+    transition: 0.5s;
+  }
+  
+}
+
+/* Extra lrge device: 1023 > */
+@media (min-width: 1023px) {
+  :root {
+  --title-font-size: 2.25rem;
+  --subtitle-font-size: 1.125rem;
+}
+
+/* resubable classes */
+.container {
+  max-width: 943px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section {
+  padding: 10rem 0;
+}
+
+.section header,
+#testimonials header {
+  max-width: 32rem;
+  text-align: center; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button {
+  height: 3.125rem;
+}
+
+nav .menu {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+}
+
+nav .menu ul {
+  display: flex;
+  gap: 2rem;
+}
+
+nav .menu ul li a.title {
+  font: 400 1rem var(--body-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+nav .menu ul li a.title.active {
+  font-weight: bold;
+  -webkit-font-smoothing: auto;
+}
+
+nav .icon-menu {
+  display:none;
+}
+
+/* layout */
+main {
+  margin-top: var(--header-heigth);
+}
+
+/* home */
+#home .container {
+  grid-auto-flow: column;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+#home .image {
+  order: 1;
+  width: 60%;
+  right: -8rem;
+}
+
+#home .text {
+  order: 0;
+  max-width: 24rem;
+  text-align: left;
+}
+
+/* about */
+#about .container {
+  margin: 0 auto;
+  grid-auto-flow: column;
+}
+
+/* services */
+.cards {
+  grid-template-columns: 1fr 1fr 1fr ;
+}
+
+.card {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.card:hover
+{
+  color: var(--base-color-alt);  
+  display: inline-block;
+  transform: translateX(-0.5rem);
+  transition: 0.5s;
+}
+
+.card i:hover {
+  transform: translateY(-0.5rem);
+  transition: 0.5s;
+}
+
+/* testimonials */
+#testimonials .container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* contact */
+#contact .container {
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+#contact .text {
+  max-width: 25rem;
+}
+
+/* footer */
+footer.section {
+  padding: 3.75rem 0;
+}
+
+footer .container {
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+}
+
 /* Extra lrge device: 1200 > */
 @media (min-width: 1200px) {
+    :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
 
   /* resubable classes */
   .container {
@@ -599,6 +812,12 @@ footer .social a:hover {
 
   nav .menu ul li a.title {
     font: 400 1rem var(--body-font);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  nav .menu ul li a.title.active {
+    font-weight: bold;
+    -webkit-font-smoothing: auto;
   }
 
   nav .icon-menu {
@@ -619,6 +838,7 @@ footer .social a:hover {
 
   #home .image {
     order: 1;
+    width: 80%;
   }
 
   #home .text {
@@ -641,6 +861,19 @@ footer .social a:hover {
   .card {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .card:hover
+  {
+    color: var(--base-color-alt);  
+    display: inline-block;
+    transform: translateX(-0.5rem);
+    transition: 0.5s;
+  }
+
+  .card i:hover {
+    transform: translateY(-0.5rem);
+    transition: 0.5s;
   }
 
   /* testimonials */
@@ -671,14 +904,3 @@ footer .social a:hover {
   }
 
 }
-/* Large devices: 1023 > */
-/* Large devices: 992 > */
-@media (min-width: 992px) {
-  :root {
-    --title-font-size: 2.25rem;
-    --subtitle-font-size: 1.125rem;
-  }
-  
-}
-
-/* Medium devices: 767 > */
