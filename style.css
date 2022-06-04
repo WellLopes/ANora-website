@@ -908,3 +908,25 @@ footer .container {
   }
 
 }
+
+/* 1920 */
+
+@media (min-width: 1920px) {
+  :root {
+    --title-font-size: 2.5rem;
+    --subtitle-font-size: 1.375rem;
+  }
+
+  /* resubable classes */
+  .container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #home .image {
+    order: 1;
+    width: 80%;
+    right: 2rem;
+  }
+}
