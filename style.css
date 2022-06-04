@@ -280,6 +280,8 @@ nav.show ul.grid{
 
 #home .image {
   position: relative;
+  width: 60%;
+  right: -6rem;
 }
 
 /*Ghost element*/
@@ -340,6 +342,8 @@ nav.show ul.grid{
 
 #about .image {
   position: relative;
+  width: 60%;
+  right: -6rem;
 }
 
 /*Ghost element*/
@@ -569,7 +573,7 @@ footer .social a:hover {
 /* Medium devices: 767 > */
 @media (min-width: 767px) {
   :root {
-    --title-font-size: 2rem;
+    --title-font-size: 1.8rem;
     --subtitle-font-size: 1rem;
   }
 
